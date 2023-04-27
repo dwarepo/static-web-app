@@ -77,13 +77,6 @@ To execute it, run: `docker run -p <local-port>:80 image-name`
 
 You can also opt to run it from the remote source using `docker run -p <local-port>:80 mcr.microsoft.com/mslearn/samples/contoso-website`
 
-## Deploying to Kubernetes
-
-Inside the [Kubernetes](./kubernetes) directory, you'll have all necessary resources to deploy the application to an AKS cluster using the [HTTP Application Routing Addon](https://docs.microsoft.com/azure/aks/http-application-routing?WT.mc_id=learndeploycontainerappsaks-learn-ludossan).
-
-1. Update the [Ingress.yaml](./kubernetes/ingress.yaml) file and update your specific DNS zone to the one you have in your AKS cluster, this information can be found in the DNS zone resource inside the resource group of your cluster
-2. Use `Kubectl apply -f <filename>` to all the files in the directory to create the workloads
-
 ## Contributing
 
 This project welcomes contributions and suggestions.  Most contributions require you to agree to a
