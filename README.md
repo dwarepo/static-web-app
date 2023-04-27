@@ -54,7 +54,6 @@ Outline the file contents of the repository. It helps users navigate the codebas
 | `CONTRIBUTING.md` | Guidelines for contributing to the sample. |
 | `README.md`       | This README file.                          |
 | `LICENSE`         | The license for the sample.                |
-| `Dockerfile`      | Docker image file                          |
 
 ## Prerequisites
 
@@ -84,21 +83,6 @@ Inside the [Kubernetes](./kubernetes) directory, you'll have all necessary resou
 
 1. Update the [Ingress.yaml](./kubernetes/ingress.yaml) file and update your specific DNS zone to the one you have in your AKS cluster, this information can be found in the DNS zone resource inside the resource group of your cluster
 2. Use `Kubectl apply -f <filename>` to all the files in the directory to create the workloads
-
-## Key concepts
-
-Hugo is a static build engine that allows users to create static websites. The idea behind this demo is to show how we can deploy a containerized application to AKS.
-
-There's a [Dockerfile](./Dockerfile) in the root of the repository, this Dockerfile is responsible for generating the image we'll be using to deploy the website. It's a simple NGINX default image, in it we do a few steps:
-
-- Update all the packages
-- Install curl, git and Node.js
-- Download and install Hugo
-- Install PostCSS and autoprefixer using NPM globally as they are requirements for the theme
-- Clone the repository and init all submodules
-- Generate a static web page from the website template
-- Move that directory into NGINX public folder
-- Expose port 80 so we can access it from the cluster
 
 ## Contributing
 
