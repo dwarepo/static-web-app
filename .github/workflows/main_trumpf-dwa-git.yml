@@ -52,5 +52,5 @@ jobs:
         with:
           app-name: 'trumpf-dwa-git'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_AF07FE1C5DDD4A4691B2CCEE679E8EF9 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_D6BA54BD62D54D1F99BFF1F883CEE004 }}
           package: .
